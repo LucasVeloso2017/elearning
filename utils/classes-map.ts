@@ -7,3 +7,9 @@ export const SHIFT_MAP: ShiftMap = {
   'Afternoon': 'Tarde',
   'Night': 'Noite',
 };
+
+export const REVERSE_SHIFT_MAP: ShiftMap = {
+  'Manhã': 'Morning',
+  'Tarde': 'Afternoon',
+  'Noite': 'Night',
+};
