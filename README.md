@@ -1,50 +1,100 @@
-# Welcome to your Expo app 👋
+# ⚛️ E.Learning
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a mobile application built with **React Native** and managed using **Expo**.
 
-## Get started
+## 🚀 Getting Started
 
-1. Install dependencies
+Follow these steps to get the project up and running on your local machine.
 
-   ```bash
-   npm install
-   ```
+### Prerequisites
 
-2. Start the app
+You'll need to have **Node.js** (which includes npm) and the **Expo CLI** installed globally.
 
-   ```bash
-   npx expo start
-   ```
+  * **Node.js**: Download and install from [nodejs.org](https://nodejs.org/).
+  * **Expo CLI**: Install it via npm:
+    ```bash
+    npm install -g expo-cli
+    ```
 
-In the output, you'll find options to open the app in a
+### Installation and Running Locally
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/LucasVeloso2017/elearning.git
+    cd your-repo-name
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+3.  **Start the Expo development server:**
+    ```bash
+    npm start
+    # or
+    expo start
+    ```
+4.  **Run the App:** The command above will open a new browser tab with the **Expo Dev Tools**. You can now run the app using one of the following methods:
+      * **iOS/Android Simulator:** Press `i` for iOS or `a` for Android in your terminal. You must have the respective emulators installed on your system.
+      * **Physical Device:** Scan the **QR code** shown in the terminal or the Expo Dev Tools page using the **Expo Go** app on your device (available for iOS and Android).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Project Structure
 
-## Get a fresh project
+This is a typical structure for a React Native/Expo project:
 
-When you're ready, run:
+  * `assets/`: Stores images, fonts, and other static assets.
+  * `components/`: Contains reusable React components (e.g., buttons, cards, headers).
+  * `app/`: Holds the main screens/pages of the application.
+  * `models/`: Holds the application models.
+  * `providers/`: Holds the application provider with contextAPI.
+  * `modules/`: Holds the module federation of the application.
+  * `service/`: Holds the service gateway.
+  * `util/`: Holds the utilitaries.
 
-```bash
-npm run reset-project
-```
+## ⚙️ Available Scripts
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+In the project directory, you can run:
 
-## Learn more
+| Script | Description |
+| :--- | :--- |
+| `npm start` | Starts the Expo development server. |
+| `npm run android` | Opens the app on a connected Android device or emulator. |
+| `npm run ios` | Opens the app on a connected iOS simulator. |
+| `npm run web` | Runs the app in a web browser (via Expo Web). |
+| `npm run eject` | Ejects from the Expo managed workflow (use with caution). |
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📦 Building and Deployment
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Standalone App Builds (APK/AAB/IPA)
 
-## Join the community
+To create a production-ready build, you'll use **Expo Application Services (EAS)**:
 
-Join our community of developers creating universal apps.
+1.  **Install EAS CLI:**
+    ```bash
+    npm install -g eas-cli
+    ```
+2.  **Login to Expo:**
+    ```bash
+    eas login
+    ```
+3.  **Configure build:**
+    ```bash
+    eas build:configure
+    ```
+4.  **Start a build:**
+    ```bash
+    eas build -p android # or -p ios or -p all
+    ```
+    This will generate a final app package that can be submitted to the **Google Play Store** or **Apple App Store**.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🛠️ Built With
+
+  * **React Native** - The framework used to build the app.
+  * **Expo** - A set of tools, libraries, and services to build native apps with JavaScript and React.
+  * **[Add other key dependencies, e.g., React Navigation, Redux, etc.]**
+
+
+## 📝 License
+
+This project is licensed under the **[Insert License Name]** - see the `LICENSE.md` file for details.
