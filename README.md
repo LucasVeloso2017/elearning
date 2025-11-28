@@ -92,7 +92,6 @@ To create a production-ready build, you'll use **Expo Application Services (EAS)
 
   * **React Native** - The framework used to build the app.
   * **Expo** - A set of tools, libraries, and services to build native apps with JavaScript and React.
-  * **[Add other key dependencies, e.g., React Navigation, Redux, etc.]**
 
 
 ## 📝 License
