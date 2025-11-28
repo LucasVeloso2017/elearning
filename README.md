@@ -97,4 +97,4 @@ To create a production-ready build, you'll use **Expo Application Services (EAS)
 
 ## 📝 License
 
-This project is licensed under the **[Insert License Name]** - see the `LICENSE.md` file for details.
+This project is licensed under the **MIT** - see the `LICENSE.md` file for details.
