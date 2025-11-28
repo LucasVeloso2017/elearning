@@ -2,7 +2,7 @@ import GenericForm, { FieldConfig, SelectOption } from '@/components/GenericForm
 import BaseLayout from '@/layout/BaseLayout';
 import { useClassContext } from '@/providers/classes-context-provider';
 import { useSchoolContext } from '@/providers/school-context-provider';
-import { SHIFT_MAP } from '@/utils/classes-map';
+import { REVERSE_SHIFT_MAP, SHIFT_MAP } from '@/utils/classes-map';
 import { useFocusEffect, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useState } from 'react';
 import z from 'zod';
@@ -34,7 +34,9 @@ const EditClass = () => {
    const handleCreate = async (data: ClassEditData) => {
       await editClass({
          id:classSelected?.id || '',
-         ...data
+         ...data,
+         shift:REVERSE_SHIFT_MAP[data.shift],
+         school:schoolsOptions.find(item => item.label === data.school)?.value
       })
       router.back()
    };
