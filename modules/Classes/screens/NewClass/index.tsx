@@ -37,7 +37,7 @@ const NewClass = () => {
    const CLASSES_FIELDS: FieldConfig[] = [
       { name: 'name', label: 'Nome da Turma', type: 'text', placeholder: 'Digite o nome da turma...' },
       { name: 'shift', label: 'Turno', type: 'select', placeholder: 'selecione o turno', options: SHIFT_OPTIONS, isRequired: true },
-      { name: 'academicYear', label: 'Ano acadêmico', type: 'number', placeholder: 'Digite o ano...' },
+      { name: 'academicYear', label: 'Ano acadêmico', type: 'number', placeholder: 'Digite o ano...',isRequired:true },
       { name: 'school', label: 'Escola', type: 'select', placeholder: 'Selecione uma escola', options: schoolsOptions, isRequired: true },
    ];
 
