@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ChevronDownIcon } from 'lucide-react-native';
 import React from 'react';
 import { Controller, FieldValues, useForm } from 'react-hook-form';
+import { ScrollView } from 'react-native';
 import { z } from 'zod';
 import { Button, ButtonText } from '../gluestack-ui/button';
 import { FormControl, FormControlError, FormControlErrorText, FormControlLabel, FormControlLabelText } from '../gluestack-ui/form-control';
@@ -52,10 +53,12 @@ const RenderInput: React.FC<RenderInputProps> = ({ control, config, errors }) =>
          </SelectTrigger>
          <SelectPortal>
             <SelectBackdrop />
-            <SelectContent>
+            <SelectContent style={{ maxHeight: 300 }}>
+               <ScrollView style={{width:'100%'}}>
                {config.options?.map((item) => (
                   <SelectItem key={item.value} label={item.label} value={item.value} />
                ))}
+               </ScrollView>
             </SelectContent>
          </SelectPortal>
       </Select>

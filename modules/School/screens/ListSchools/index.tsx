@@ -19,7 +19,7 @@ import ListItem from '../../components/ListItem';
 const ListSchools = () => {
   const router = useRouter()
   const deleteModalRef = useRef<DeleteItemModalRefHandle>(null)
-  const { loadSchools, schoolList, handleSelectSchool, deleteSchool,setSearchTerm } = useSchoolContext()
+  const { loadSchools, schoolList, handleSelectSchool, deleteSchool, setSearchTerm } = useSchoolContext()
 
   useFocusEffect(
     useCallback(() =>{
@@ -33,6 +33,7 @@ const ListSchools = () => {
   }
 
   const handleAdd = () => router.push('/school/new')
+
   const handleEdit = (item:SchoolModel) => {
     handleSelectSchool(item)
     router.push(`/school/edit/${item.id}`)

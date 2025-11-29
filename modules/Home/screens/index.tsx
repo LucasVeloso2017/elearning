@@ -5,6 +5,7 @@ import { useRouter } from 'expo-router';
 import { GraduationCap, School } from 'lucide-react-native';
 import React from 'react';
 import ScreenCard from '../components/ScreenCard';
+
 const HomeScreen = () => {
    const router = useRouter()
 
